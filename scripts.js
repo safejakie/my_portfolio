@@ -1,6 +1,17 @@
+/* ============================================================
+   DAREL SYLVESTRE – PORTFOLIO SCRIPTS
+   - Cursor glow effect
+   - Navbar scroll behaviour + active link
+   - Mobile hamburger menu
+   - Reveal animations (IntersectionObserver)
+   - Skill bars animation
+   - Scroll-to-top button
+   - Contact form (Web3Forms API)
+   ============================================================ */
+
 document.addEventListener('DOMContentLoaded', () => {
 
-  /*  1. CURSEUR GLOW  */
+  /* ─── 1. CURSOR GLOW ─────────────────────────────────────── */
   const cursorGlow = document.getElementById('cursorGlow');
   if (cursorGlow && window.matchMedia('(pointer:fine)').matches) {
     document.addEventListener('mousemove', (e) => {
@@ -9,18 +20,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /*  2. NAVBAR SCROLL ET LIEN ACTIVE  */
+  /* ─── 2. NAVBAR SCROLL + ACTIVE LINK ───────────────────── */
   const navbar   = document.getElementById('navbar');
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('main section[id]');
 
   const updateNavbar = () => {
+    // Scrolled class for backdrop-blur
     if (window.scrollY > 40) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
 
+    // Active link highlight based on visible section
     let current = '';
     sections.forEach((sec) => {
       const top = sec.offsetTop - 120;
@@ -34,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', updateNavbar, { passive: true });
   updateNavbar(); // run once on load
 
-  /* 3. MOBILE HAMBURGER */
+  /* ─── 3. MOBILE HAMBURGER ────────────────────────────────── */
   const hamburger  = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
 
@@ -44,11 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
       hamburger.setAttribute('aria-expanded', open);
       mobileMenu.classList.toggle('open', open);
       mobileMenu.setAttribute('aria-hidden', !open);
+      // Prevent body scroll when menu is open
       document.body.style.overflow = open ? 'hidden' : '';
     };
 
     hamburger.addEventListener('click', toggleMenu);
 
+    // Close on link click
     mobileMenu.querySelectorAll('.mobile-link, .btn').forEach((link) => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('open');
@@ -60,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /*  4. REVEAL ON SCROLL  */
+  /* ─── 4. REVEAL ON SCROLL (IntersectionObserver) ─────────── */
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -80,7 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
-  /*  5. BARS DE COMPÉTENCES  */
+  /* ─── 5. SKILL BARS ANIMATION ────────────────────────────── */
+  // Skill bars animate when their container becomes visible
   const skillObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -94,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   document.querySelectorAll('.skills-grid').forEach((el) => skillObserver.observe(el));
 
-  /*  6. SCROLL SMOOTH POUR LES LIENS D'ANCRE  */
+  /* ─── 6. SMOOTH SCROLL for anchor links ─────────────────── */
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
       const target = document.querySelector(anchor.getAttribute('href'));
@@ -106,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /*  7. BOUTON DE RETOUR EN HAUT DE LA PAGE  */
+  /* ─── 7. SCROLL-TO-TOP BUTTON ────────────────────────────── */
   const scrollTopBtn = document.getElementById('scrollTop');
   if (scrollTopBtn) {
     window.addEventListener('scroll', () => {
@@ -118,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /*  8. CARTE DE PROJET */
+  /* ─── 8. PROJECT CARD 3D TILT (desktop only) ─────────────── */
   if (window.matchMedia('(pointer:fine) and (min-width:769px)').matches) {
     document.querySelectorAll('.project-card').forEach((card) => {
       card.addEventListener('pointermove', (e) => {
@@ -135,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /*  9. CONTACT FORM (Web3Forms)  */
+  /* ─── 9. CONTACT FORM (Web3Forms) ────────────────────────── */
   const form      = document.getElementById('form');
   const submitBtn = document.getElementById('submitBtn');
   const btnText   = document.getElementById('btnText');
@@ -145,6 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const formData = new FormData(form);
 
+      // Loading state
       btnText.textContent = 'Envoi en cours…';
       submitBtn.disabled = true;
 
@@ -170,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* NOTIFICATION  */
+  /* ─── TOAST NOTIFICATION HELPER ─────────────────────────── */
   function showToast(message, type = 'success') {
     const toast = document.createElement('div');
     toast.textContent = message;
@@ -194,11 +211,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.body.appendChild(toast);
 
+    // Animate in
     requestAnimationFrame(() => {
       toast.style.transform = 'translateX(-50%) translateY(0)';
       toast.style.opacity   = '1';
     });
 
+    // Auto-dismiss
     setTimeout(() => {
       toast.style.transform = 'translateX(-50%) translateY(20px)';
       toast.style.opacity   = '0';
@@ -206,4 +225,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4000);
   }
 
-}); 
+}); // DOMContentLoaded
