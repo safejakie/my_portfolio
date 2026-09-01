@@ -17,9 +17,8 @@
   </head>
   <body>
 
-    <!-- Curseur glow retiré pour un rendu plus sobre -->
 
-    <!-- ===================== NAVIGATION ===================== -->
+    <!-- NAVIGATION -->
     <header class="navbar" id="navbar">
       <div class="nav-container">
         <a href="#hero" class="nav-brand" aria-label="Retour en haut">
@@ -51,7 +50,7 @@
 
     <main>
 
-      <!-- ===================== HERO ===================== -->
+      <!-- HERO -->
       <section id="hero" class="hero-section">
 
 
@@ -78,12 +77,12 @@
             </div>
             <div class="hero-stats reveal">
               <div class="stat">
-                <span class="stat-number">5+</span>
-                <span class="stat-label">Projets Data/IA</span>
+                <span class="stat-number">4+</span>
+                <span class="stat-label">Projets</span>
               </div>
               <div class="stat-divider" aria-hidden="true"></div>
               <div class="stat">
-                <span class="stat-number">2</span>
+                <span class="stat-number">5+</span>
                 <span class="stat-label">Certifications</span>
               </div>
               <div class="stat-divider" aria-hidden="true"></div>
@@ -115,7 +114,7 @@
         </div>
       </section>
 
-      <!-- ===================== ABOUT ===================== -->
+      <!-- ABOUT -->
       <section id="about" class="section about-section">
         <div class="container">
           <div class="section-label reveal">À propos</div>
@@ -166,7 +165,7 @@
         </div>
       </section>
 
-      <!-- ===================== SKILLS ===================== -->
+      <!--  SKILLS  -->
       <section id="skills" class="section skills-section">
         <div class="container">
           <div class="section-label reveal">Compétences</div>
@@ -230,7 +229,7 @@
         </div>
       </section>
 
-      <!-- ===================== PROJECTS ===================== -->
+      <!-- PROJECTS -->
       <section id="projects" class="section projects-section">
         <div class="container">
           <div class="section-label reveal">Portfolio</div>
@@ -241,11 +240,11 @@
 
           <div class="projects-grid">
 
-            <!-- ── CARD 1 : Chat&Go ── -->
+            <!-- Carte 1 : Chat&Go -->
             <article class="project-card reveal" id="card-chatandgo">
               <div class="card-cover" style="--cover-from:#3a2530;--cover-to:#6b4258;">
                 <video class="card-cover-video" src="assets/videos/chatgo-demo.mp4" controls preload="metadata" playsinline aria-label="Démonstration de Chat&amp;Go"></video>
-                <span class="card-badge badge-wip">En cours</span>
+                <span class="card-badge badge-done">Terminé</span>
                 <span class="card-year">2025–2026</span>
               </div>
               <div class="card-body">
@@ -255,14 +254,20 @@
                   Application mobile de commerce conversationnel connectant les utilisateurs à des prestataires
                   locaux à Abidjan via un agent IA façon chat.
                 </p>
-                <div class="card-tags">
-                  <span class="tag">Flutter</span><span class="tag">FastAPI</span>
-                  <span class="tag">Groq</span><span class="tag">Python</span>
-                </div>
+                  <div class="card-tags">
+                    <span class="tag">Flutter</span><span class="tag">FastAPI</span>
+                    <span class="tag">Groq</span><span class="tag">Python</span>
+                  </div>
+                  <div class="card-actions">
+                    <a class="btn-outline-card" href="https://github.com/safejakie/chatgo_flutter" target="_blank" rel="noopener noreferrer">
+                      Code source
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                  </div>
               </div>
             </article>
 
-            <!-- ── CARD 2 : Power BI — Alcool, Conflits, Homicides ── -->
+            <!-- Carte 2 : Power BI — Alcool, Conflits, Homicides -->
             <article class="project-card reveal" id="card-powerbi">
               <div class="card-cover" style="--cover-from:#3a2530;--cover-to:#6b4258;">
                 <video class="card-cover-video" src="assets/videos/powerbi-demo.mp4" controls preload="metadata" playsinline aria-label="Démonstration du tableau de bord Power BI"></video>
@@ -280,10 +285,16 @@
                   <span class="tag">Power BI</span><span class="tag">DAX</span>
                   <span class="tag">Python</span><span class="tag">Modélisation</span>
                 </div>
+                <div class="card-actions">
+                  <a class="btn-outline-card" href="https://drive.google.com/drive/folders/19AjhatrNKd1uyEau-TRUfaQU-gjGMQCr?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    Voir sur Drive
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
               </div>
             </article>
 
-            <!-- ── CARD 3 : Akwaba_bot ── -->
+            <!-- Carte 3 : Akwaba_bot -->
             <article class="project-card reveal" id="card-akwababot">
               <div class="card-cover" style="--cover-from:#3a2530;--cover-to:#6b4258;">
                 <video class="card-cover-video" src="assets/videos/akwababot-demo.mp4" controls preload="metadata" playsinline aria-label="Démonstration de Akwaba_bot"></video>
@@ -304,7 +315,7 @@
               </div>
             </article>
 
-            <!-- ── CARD 4 : BotanIA ── -->
+            <!-- Carte 4 : BotanIA -->
             <article class="project-card reveal" id="card-botania">
               <div class="card-cover" style="--cover-from:#3a2530;--cover-to:#6b4258;">
                 <video class="card-cover-video" src="assets/videos/botania-demo.mp4" controls preload="metadata" playsinline aria-label="Démonstration de BotanIA"></video>
@@ -322,6 +333,12 @@
                   <span class="tag">PHP</span><span class="tag">FastAPI</span>
                   <span class="tag">OpenCV</span><span class="tag">PlantNet</span><span class="tag">Groq</span>
                 </div>
+                <div class="card-actions">
+                  <a class="btn-outline-card" href="https://github.com/safejakie/appli_whataplant" target="_blank" rel="noopener noreferrer">
+                    Code source
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
               </div>
             </article>
 
@@ -329,7 +346,7 @@
         </div>
       </section>
 
-      <!-- ===================== PROCESS ===================== -->
+      <!-- PROCESS -->
       <section id="process" class="section process-section">
         <div class="container">
           <div class="section-label reveal">Méthode</div>
@@ -359,7 +376,7 @@
         </div>
       </section>
 
-      <!-- ===================== CONTACT ===================== -->
+      <!-- CONTACT -->
       <section id="contact" class="section contact-section">
         <div class="container">
           <div class="contact-inner reveal">
@@ -371,7 +388,7 @@
             <div class="contact-grid">
               <!-- Form -->
               <form class="contact-form" id="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
-                <input type="hidden" name="access_key" value="VOTRE_CLE_WEB3FORMS_ICI" />
+                <input type="hidden" name="access_key" value="197028ce-20aa-4dea-b7a8-648821f05123" />
                 <div class="form-row">
                   <div class="form-group">
                     <label for="contact-name">Votre nom</label>
@@ -450,7 +467,7 @@
 
     </main>
 
-    <!-- ===================== FOOTER ===================== -->
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="container footer-inner">
         <p class="footer-copy">© 2026 Adoumangan Safe Jakie — Développeuse Full-Stack &amp; Data/IA Analyst · Abidjan, Côte d'Ivoire.</p>

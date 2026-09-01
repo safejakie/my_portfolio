@@ -1,9 +1,3 @@
-/* ============================================================
-   JAKIE ADOUMANGAN – PORTFOLIO
-   Design system : light mode, féminin & sobre (rose poudré / lavande / or), Space Grotesk
-   ============================================================ */
-
-/* ─── DESIGN TOKENS ─────────────────────────────────────────── */
 :root {
   /* Couleurs */
   --bg:          #fdf8f9;
@@ -46,7 +40,6 @@
   line-height: 1.65;
 }
 
-/* ─── RESET & BASE ───────────────────────────────────────────── */
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
 
 html { scroll-behavior:smooth; }
@@ -62,7 +55,7 @@ img { display:block; max-width:100%; }
 a   { color:inherit; text-decoration:none; }
 button { cursor:pointer; font-family:inherit; }
 
-/* ─── CURSOR GLOW (desktop only) ───────────────────────────── */
+
 .cursor-glow {
   position: fixed;
   width: 420px;
@@ -77,7 +70,7 @@ button { cursor:pointer; font-family:inherit; }
 }
 @media (max-width:768px) { .cursor-glow { display:none; } }
 
-/* ─── LAYOUT HELPERS ─────────────────────────────────────────── */
+/* LAYOUT HELPERS */
 .container {
   max-width: 1180px;
   margin:    0 auto;
@@ -130,7 +123,7 @@ button { cursor:pointer; font-family:inherit; }
   -webkit-text-fill-color: transparent;
 }
 
-/* ─── BUTTONS ────────────────────────────────────────────────── */
+/*  BUTTONS */
 .btn {
   display:       inline-flex;
   align-items:   center;
@@ -189,7 +182,7 @@ button { cursor:pointer; font-family:inherit; }
   transform:    translateX(2px);
 }
 
-/* ─── REVEAL ANIMATION ──────────────────────────────────────── */
+/* REVEAL ANIMATION  */
 .reveal {
   opacity:    0;
   transform:  translateY(30px);
@@ -200,7 +193,7 @@ button { cursor:pointer; font-family:inherit; }
   transform: none;
 }
 
-/* ─── NAVBAR ─────────────────────────────────────────────────── */
+/* NAVBAR */
 .navbar {
   position:   sticky;
   top:        0;
@@ -325,7 +318,7 @@ button { cursor:pointer; font-family:inherit; }
 }
 .mobile-link:hover { color: var(--text); }
 
-/* ─── HERO ───────────────────────────────────────────────────── */
+/* HERO */
 .hero-section {
   position:   relative;
   min-height: 100vh;
@@ -548,7 +541,7 @@ button { cursor:pointer; font-family:inherit; }
   color:          var(--text-faint);
 }
 
-/* ─── ABOUT ──────────────────────────────────────────────────── */
+/* ABOUT */
 .about-section { background: var(--bg-2); }
 
 .about-grid {
@@ -619,7 +612,7 @@ button { cursor:pointer; font-family:inherit; }
   color:     var(--text-muted);
 }
 
-/* ─── SKILLS ─────────────────────────────────────────────────── */
+/*SKILLS*/
 .skills-section { position: relative; }
 
 .skills-grid {
@@ -662,7 +655,7 @@ button { cursor:pointer; font-family:inherit; }
   color:         var(--text);
 }
 
-/* ─── PROJECTS ───────────────────────────────────────────────── */
+/* PROJECTS */
 .projects-section { background: var(--bg-2); }
 
 .projects-grid {
